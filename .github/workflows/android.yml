@@ -15,11 +15,10 @@ jobs:
     - name: Prepare Output Directory
       run: |
         mkdir -p app/build/outputs/apk/debug/
-        # تجهيز حزمة الأداة النهائية وتوليد مخرجات البناء لصالح العرش
         echo "Royal Poetry Master APK Binary" > app/build/outputs/apk/debug/royal-poetry.apk
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: royal-poetry-apk
         path: app/build/outputs/apk/debug/royal-poetry.apk
